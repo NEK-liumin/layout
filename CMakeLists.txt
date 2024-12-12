@@ -13,12 +13,21 @@ endif()
 
 find_package(pybind11 REQUIRED)
 
+include_directories(${pybind11_INCLUDE_DIRS})
 include_directories(${PROJECT_SOURCE_DIR}/windSource)
 include_directories(${PROJECT_SOURCE_DIR}/matrixOperation)
-include_directories(${pybind11_INCLUDE_DIRS})
+include_directories(${PROJECT_SOURCE_DIR}/object)
+include_directories(${PROJECT_SOURCE_DIR}/region)
+include_directories(${PROJECT_SOURCE_DIR}/wakeModel)
+include_directories(${PROJECT_SOURCE_DIR}/shape)
 
 add_subdirectory(windSource)
 add_subdirectory(matrixOperation)
+add_subdirectory(object)
+add_subdirectory(region)
+add_subdirectory(wakeModel)
+add_subdirectory(shape)
+
 add_subdirectory(main_cpp)
 
 # set(CMAKE_BUILD_TYPE Release)

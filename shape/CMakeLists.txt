@@ -1,13 +1,14 @@
 cmake_minimum_required(VERSION 3.10)
 
-project("region")
+project("shape")
 
 aux_source_directory(./ SRC)
 
+include_directories(${LAYOUT}/matrixOperation)
+
 link_libraries(matrixOperation)
-link_libraries(shape)
 
 set(LIBRARY_OUTPUT_PATH ${LIBPATH})
-add_library(region ${SRC})
+add_library(shape ${SRC})
 
 # PYBIND11_ADD_MODULE(addPY ${SRC})

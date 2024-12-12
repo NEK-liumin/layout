@@ -5,6 +5,8 @@ aux_source_directory(./ SRC)
 
 link_libraries(matrixOperation)
 link_libraries(windSource)
+link_libraries(shape)
+link_libraries(region)
 
 set(EXECUTABLE_OUTPUT_PATH ${LAYOUT}/bin)
 add_executable(main_cpp ${SRC})
