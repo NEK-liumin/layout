@@ -1,0 +1,10 @@
+cmake_minimum_required (VERSION 3.10)
+
+project ("main_cpp")
+aux_source_directory(./ SRC)
+
+link_libraries(matrixOperation)
+link_libraries(windSource)
+
+set(EXECUTABLE_OUTPUT_PATH ${LAYOUT}/bin)
+add_executable(main_cpp ${SRC})
